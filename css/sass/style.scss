@@ -1,0 +1,357 @@
+@import "../sass/libs/reset.scss";
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+:root {
+    --main-white-color: #fff;
+    --main-black-color: black;
+    --main-purple-color: #9e3da4;
+    --main-blue-color: #0078a8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font: 16px/1.5 "Dosis", sans-serif;
+    background: var(--main-white-color);
+    /*IE FIX*/
+    /*display: flex;
+  flex-direction: column;*/
+}
+
+
+/* CONTAINER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper>* {
+    padding: 20px;
+}
+
+
+/* HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page-header {
+    background: var(--main-white-color);
+    img {
+        width: 5rem;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: auto;
+        color: var(--main-purple-color);
+        font-weight: bolder;
+    }
+    .logo {
+        display: flex;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        order: 1;
+        width: 100%;
+        margin-top: 15px;
+    }
+    ul li:not(:last-child) {
+        padding-right: 15px;
+    }
+    .cta-contact {
+        font-family: inherit;
+        font-size: 1.2rem;
+        padding: 5px 18px;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+}
+
+
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 350px;
+    background: var(--main-purple-color) url(/img/bg1.jpg) no-repeat center / cover;
+    /*  background-blend-mode: luminosity; */
+    color: var(--main-white-color);
+    div {
+        max-width: 500px;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    p+p {
+        margin-top: 10px;
+    }
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background: var(--main-white-color);
+    ul {
+        display: flex;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    ul li:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+
+/* station
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page-main-station {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    /*  min-height: 350px; */
+    background: url(/img/bg2.jpg) no-repeat center / cover;
+    /*  background-blend-mode: luminosity; */
+    background-position: right 50% bottom 30%;
+    color: var(--main-purple-color);
+    padding-left: 100px;
+    position: relative;
+    h1 {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    p+p {
+        margin-top: 10px;
+    }
+    .details {
+        display: flex;
+    }
+    #nav {
+        margin-right: 200px;
+    }
+    .station-info {
+        margin-left: 20px;
+        width: 70%;
+        font-weight: bolder;
+        color: var(--main-purple-color);
+        div {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: var(--main-blue-color);
+            margin: 10px;
+        }
+    }
+    .btn {
+        font-weight: bolder;
+        cursor: pointer;
+        transition: all 0.0s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        margin: 5px;
+        padding: 10px;
+        &:hover {
+            background-color: var(--main-purple-color);
+            color: white;
+        }
+    }
+    &:before {
+        content: "";
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (min-width: 550px) {
+    .page-header ul {
+        width: auto;
+        margin-top: 0;
+    }
+    .page-header .cta-contact {
+        order: 1;
+    }
+    .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .page-footer ul {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    .page-main {
+        padding-left: 90px;
+    }
+}
+
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page-header nav>*,
+.page-main,
+.page-main-station,
+.page-footer>* {
+    opacity: 0;
+}
+
+.page-header,
+.page-footer,
+.page-main .text-wrapper,
+.page-main-station .text-wrapper {
+    overflow: hidden;
+}
+
+.page-header nav>* {
+    transform: translateY(-30px);
+}
+
+.page-footer>* {
+    transform: translateY(30px);
+}
+
+.page-header {
+    position: relative;
+}
+
+.page-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--main-purple-color);
+    z-index: 99999;
+    transform: scaleX(0);
+}
+
+.page-main-station .text-wrapper+.text-wrapper {
+    margin-top: 10px;
+}
+
+.page-main-station .text-wrapper * {
+    transform: translateY(120%);
+}
+
+.page-main-station .p-wrapper * {
+    transform: translateY(-120%);
+}
+
+.page-main .text-wrapper+.text-wrapper {
+    margin-top: 10px;
+}
+
+.page-main .text-wrapper * {
+    transform: translateY(120%);
+}
+
+.page-main .p-wrapper * {
+    transform: translateY(-120%);
+}
+
+.loaded .page-header::after {
+    animation: scaleIn 1.3s ease-in 0.2s forwards;
+}
+
+.loaded .page-main-station {
+    animation: fadeIn 1s ease-in 0.7s forwards;
+}
+
+.loaded .page-main {
+    animation: fadeIn 1s ease-in 0.7s forwards;
+}
+
+.loaded .page-header nav>*,
+.loaded .page-footer>* {
+    animation: fadeIn 1s ease-in 0.7s forwards, slideIn 0.8s ease-in 0.9s forwards;
+}
+
+.loaded .page-main-station .text-wrapper * {
+    animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+}
+
+.loaded .page-main .text-wrapper * {
+    animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+}
+
+@keyframes fadeIn {
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
