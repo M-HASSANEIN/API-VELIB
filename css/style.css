@@ -235,7 +235,11 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   min-height: 350px;
-  background: var(--main-purple-color) url(/img/bg1.jpg) no-repeat center/cover;
+  background: var(--main-purple-color);
+  background-image: url(../img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  url(/img/bg1.jpg) no-repeat center / cover; */
   color: var(--main-white-color);
 }
 
@@ -308,7 +312,7 @@ body {
 /* MAIN
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-main-station {
-  background: url(/img/bg2.jpg) no-repeat center/cover;
+  background: url(../img/bg2.jpg) no-repeat center/cover;
   background-position: right 50% bottom 30%;
   color: var(--main-purple-color);
   padding-left: 20px;
@@ -349,13 +353,11 @@ body {
 }
 
 .page-main-station .station-info {
-  /*  margin-left: 20px; */
   font-weight: bolder;
   color: var(--main-purple-color);
 }
 
 .page-main-station .station-info div {
-  /* font-size: 2.5rem; */
   font-weight: bolder;
   color: var(--main-blue-color);
   margin: 10px;
