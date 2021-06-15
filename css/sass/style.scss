@@ -1,6 +1,6 @@
 @import "../sass/libs/reset.scss";
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
-:root {
+ :root {
     --main-white-color: #fff;
     --main-black-color: black;
     --main-purple-color: #9e3da4;
@@ -32,8 +32,11 @@ body {
     font: 16px/1.5 "Dosis", sans-serif;
     background: var(--main-white-color);
     /*IE FIX*/
-    /*display: flex;
-  flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        font-size: 1.8rem;
+    }
 }
 
 
@@ -90,6 +93,9 @@ body {
         padding: 5px 18px;
         border: 1px solid;
         border-radius: 5px;
+        @media screen and (min-width: 550px) {
+            order: 1;
+        }
     }
 }
 
@@ -104,7 +110,6 @@ body {
     flex-grow: 1;
     min-height: 350px;
     background: var(--main-purple-color) url(/img/bg1.jpg) no-repeat center / cover;
-    /*  background-blend-mode: luminosity; */
     color: var(--main-white-color);
     div {
         max-width: 500px;
@@ -114,6 +119,9 @@ body {
     }
     p+p {
         margin-top: 10px;
+    }
+    @media screen and (min-width: 768px) {
+        padding-left: 90px;
     }
 }
 
@@ -125,10 +133,18 @@ body {
     display: flex;
     flex-direction: column-reverse;
     background: var(--main-white-color);
+    @media screen and (min-width: 550px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     ul {
         display: flex;
         font-size: 1.5rem;
         margin-bottom: 5px;
+        @media screen and (min-width: 550px) {
+            margin-bottom: 0;
+        }
     }
     ul li:not(:last-child) {
         margin-right: 20px;
@@ -144,41 +160,47 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .page-main-station {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    /*  min-height: 350px; */
     background: url(/img/bg2.jpg) no-repeat center / cover;
-    /*  background-blend-mode: luminosity; */
     background-position: right 50% bottom 30%;
     color: var(--main-purple-color);
-    padding-left: 100px;
+    padding-left: 20px;
     position: relative;
     h1 {
         margin-bottom: 20px;
         font-size: 3rem;
         font-weight: bolder;
+        text-align: center;
     }
     p+p {
         margin-top: 10px;
     }
     .details {
         display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 920px) {
+            flex-direction: column;
+            ;
+        }
     }
     #nav {
-        margin-right: 200px;
+        width: 100%;
+        margin-right: 50px;
     }
     .station-info {
-        margin-left: 20px;
-        width: 70%;
+        /*  margin-left: 20px; */
         font-weight: bolder;
         color: var(--main-purple-color);
         div {
-            font-size: 2.5rem;
+            /* font-size: 2.5rem; */
             font-weight: bolder;
             color: var(--main-blue-color);
             margin: 10px;
+        }
+        #name,
+        #add,
+        #bikes,
+        #free {
+            font-size: 2.5rem;
         }
     }
     .btn {
@@ -205,37 +227,6 @@ body {
         left: 0;
         right: 0;
         z-index: -1;
-    }
-}
-
-
-/* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media screen and (min-width: 550px) {
-    .page-header ul {
-        width: auto;
-        margin-top: 0;
-    }
-    .page-header .cta-contact {
-        order: 1;
-    }
-    .page-footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .page-footer ul {
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
-    .page-main {
-        padding-left: 90px;
     }
 }
 
@@ -352,6 +343,16 @@ body {
 }
 
 #map {
-    width: 100%;
+    width: 500px;
     height: 500px;
+    margin: auto;
+    @media screen and (max-width: 992px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 482px) {
+        width: 300px;
+    }
 }
