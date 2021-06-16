@@ -246,11 +246,6 @@ body {
   -o-border-radius: 10px;
 }
 
-.page-header #form input[type=submit] .option,
-.page-header #form select .option {
-  cursor: pointer;
-}
-
 .page-header #form input[type=submit]:hover {
   background-color: var(--main-white-color);
   color: var(--main-purple-color);
