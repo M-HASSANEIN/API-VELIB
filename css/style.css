@@ -114,7 +114,7 @@ a {
 }
 
 body {
-  font: 16px/1.5 "Dosis", sans-serif;
+  font: 1.6rem "Dosis", sans-serif;
   background: var(--main-white-color);
   /*IE FIX*/
   display: -webkit-box;
@@ -216,6 +216,45 @@ body {
         -ms-flex-order: 1;
             order: 1;
   }
+}
+
+/* HEADER page station
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header #form {
+  font-family: "Dosis", sans-serif;
+  font-size: 3rem;
+  padding: 50px;
+}
+
+.page-header #form label {
+  color: var(--main-purple-color);
+  font-weight: bolder;
+}
+
+.page-header #form input[type=submit],
+.page-header #form select {
+  border: none;
+  background-color: var(--main-purple-color);
+  color: var(--main-white-color);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.page-header #form input[type=submit] .option,
+.page-header #form select .option {
+  cursor: pointer;
+}
+
+.page-header #form input[type=submit]:hover {
+  background-color: var(--main-white-color);
+  color: var(--main-purple-color);
+  border: 1px solid var(--main-purple-color);
 }
 
 /* MAIN
