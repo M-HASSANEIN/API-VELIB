@@ -104,6 +104,11 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .page-header {
+    h2 {
+        display: block;
+        margin: auto;
+        width: 400px;
+    }
     #form {
         font-family: "Dosis", sans-serif;
         font-size: 3rem;
@@ -125,11 +130,12 @@ body {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
+            margin: 10px;
+            border: 1px solid var(--main-purple-color);
         }
         input[type=submit]:hover {
             background-color: var(--main-white-color);
             color: var(--main-purple-color);
-            border: 1px solid var(--main-purple-color);
         }
     }
 }
@@ -238,6 +244,10 @@ body {
         #bikes,
         #free {
             font-size: 2.5rem;
+        }
+        #add,
+        #name {
+            width: 300px;
         }
     }
     .btn {

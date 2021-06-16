@@ -220,6 +220,12 @@ body {
 
 /* HEADER page station
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header h2 {
+  display: block;
+  margin: auto;
+  width: 400px;
+}
+
 .page-header #form {
   font-family: "Dosis", sans-serif;
   font-size: 3rem;
@@ -244,12 +250,13 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  margin: 10px;
+  border: 1px solid var(--main-purple-color);
 }
 
 .page-header #form input[type=submit]:hover {
   background-color: var(--main-white-color);
   color: var(--main-purple-color);
-  border: 1px solid var(--main-purple-color);
 }
 
 /* MAIN
@@ -402,6 +409,11 @@ body {
 .page-main-station .station-info #bikes,
 .page-main-station .station-info #free {
   font-size: 2.5rem;
+}
+
+.page-main-station .station-info #add,
+.page-main-station .station-info #name {
+  width: 300px;
 }
 
 .page-main-station .btn {
